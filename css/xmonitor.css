@@ -100,13 +100,13 @@ input {
     margin: 10px;
 }
 
-.food, .transport, .services, .disinfectant, .n-other, .c-other {
+.food, .transport, .services, .disinfectant, .n-other, .c-other, .medication {
     padding: 5px;
     align-content: center;
 }
 
 .food h3, .transport h3, .services h3, .disinfectant h3,
-.n-other h3, .c-other h3 {
+.n-other h3, .c-other h3, .medication h3 {
     margin: 5px;
 }
 
