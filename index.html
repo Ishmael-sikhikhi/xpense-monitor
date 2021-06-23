@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome page</title>
+
+</head>
+<style>
+body{
+    background-color:  rgba(214, 112, 168, 0.507);
+}
+/* big screen */
+@media(min-width: 700px){
+    body{
+        background-color: rgba(238, 53, 156, 0.507);
+        border:rgb(227, 227, 233); 
+        border-width:5px;
+         border-style:solid;
+         margin-left: 20%;
+         margin-right: 20%; 
+         margin-top: 10%;
+    }
+    h1{
+        color: rgb(82, 6, 92);
+        text-align: center;
+    }
+    .labelSalary{
+        font-size: large;
+        padding-right: 5px;
+        margin-left: 30%;
+    }
+    .inputSalary{
+        width: 8%;
+        padding: 5px;
+        border-radius: 5px;
+      
+    }
+    .radioA{
+        margin-left: 30%;
+        font-size: large;
+    }
+    .radioB{
+       
+        font-size: large;
+    }
+    .button {
+  background-color: #f6fcf6;
+  color:black
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  
+}
+.total{
+    width: 10%;
+    
+}
+    
+}
+
+/* small screen */
+@media(max-width: 700px){
+    body{
+        background-color: rgba(238, 53, 156, 0.507);
+        border:rgb(4, 9, 56); 
+        border-width:3px;
+         border-style:solid;
+         margin-left: 20%;
+         margin-right: 20%; 
+         margin-top: 10%;
+    }
+    h1{
+        color: rgb(17, 19, 17);
+        text-align: center;
+    }
+    .labelSalary{
+        font-size: medium;
+        padding-right: 2px;
+        margin-left: 5%;
+    }
+    .inputSalary{
+        width: 15%;
+        margin-left: 30%;
+      
+    }
+    
+    .button {
+  background-color: #e3f0e3;
+  border: none;
+  color: rgb(5, 4, 4);
+  margin-left: 10%;
+  border-radius: 5px;
+ 
+}
+.total{
+    width: 19%;
+    
+}
+    
+}
+   
+        </style>
+<body>
+    <h1>Welcome back Thembi!</h1>
+    <br><br><br>
+    <label class="labelSalary">Please enter your household income for the month:</label>R <input class="inputSalary" placeholder="xxx.xx" type="number">
+    
+       
+         
+      <br><br><br><br>
+    
+      
+        <button class="button" style="margin-left: 50%;">Submit</button>
+
+        
+   
+    <br><br><br><br><br><br>
+   
+</body>
+
+</html>
