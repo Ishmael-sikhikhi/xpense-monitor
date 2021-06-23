@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome page</title>
 </head>
+
 <style>
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+
 body{
     background-color:  rgba(214, 112, 168, 0.507);
+    font-family: 'Lato', Helvetica, sans-serif;
 }
 /* big screen */
 @media(min-width: 700px){
@@ -95,12 +99,13 @@ body{
 }
 }
         </style>
+    
 <body>
     <h1>Welcome back Thembi!</h1>
     <br><br><br>
     <label class="labelSalary">Please enter your household income for the month:</label>R <input class="inputSalary" placeholder="xxx.xx" type="number">
       <br><br><br><br>
-        <button class="button" style="margin-left: 50%;">Submit</button>
+        <button class="button" onclick= "location.href= './xmonitor.html'" style="margin-left: 50%;">Submit</button>
     <br><br><br><br><br><br>
 </body>
 </html>

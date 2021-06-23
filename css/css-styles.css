@@ -1,4 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+
 body{
+    font-family: 'Lato', Helvetica, sans-serif;
     background-color: rgba(230, 53, 156, 0.507);
 }
 h1{
