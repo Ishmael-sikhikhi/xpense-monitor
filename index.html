@@ -11,14 +11,30 @@
     @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 
 body{
-    background-color:  rgba(214, 112, 168, 0.507);
+    background-color:  rgba(238, 53, 156, 0.507);
     font-family: 'Lato', Helvetica, sans-serif;
+    margin: 0 auto;
+
 }
+.container {
+    max-width: 1024px;
+    margin: auto;
+    padding: 0 25px;
+}
+.header .xmonitor-header {
+    width: 85%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    border: 3px solid white;
+}
+
 /* big screen */
 @media(min-width: 700px){
-    body{
-        background-color: rgba(238, 53, 156, 0.507);
-        border:rgb(227, 227, 233);
+    .showcase{
+        background-color: white;
+        border-radius: 7.5px;
+        border:white;
         border-width:5px;
          border-style:solid;
          margin-left: 20%;
@@ -30,13 +46,14 @@ body{
         text-align: center;
     }
     .labelSalary{
-        font-size: large;
+        font-size: 20px;
         padding-right: 5px;
-        margin-left: 30%;
+        margin-left: 25%;
     }
     .inputSalary{
-        width: 8%;
+        width: 11%;
         padding: 5px;
+        height: 16px;
         border-radius: 5px;
     }
     .radioA{
@@ -47,14 +64,15 @@ body{
         font-size: large;
     }
     .button {
-  background-color: #F6FCF6;
-  color:black;
-  border: none;
+  background-color: transparent;
+  color: rgb(82, 6, 92);
+  border: 3px solid black;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
@@ -65,7 +83,7 @@ body{
 }
 /* small screen */
 @media(max-width: 700px){
-    body{
+    .showcase{
         background-color: rgba(238, 53, 156, 0.507);
         border:rgb(4, 9, 56);
         border-width:3px;
@@ -88,7 +106,7 @@ body{
         margin-left: 30%;
     }
     .button {
-  background-color: #E3F0E3;
+  background-color: rgba(238, 53, 156, 0.507);
   border: none;
   color: rgb(5, 4, 4);
   margin-left: 10%;
@@ -101,11 +119,21 @@ body{
         </style>
     
 <body>
-    <h1>Welcome back Thembi!</h1>
+    <header class="header">
+        <div class="container xmonitor-header">
+            <h1>X-PENSE MONITOR</h1>
+        </div>
+        
+    </header>
+
+    <section class="showcase"> 
+        <h1>Welcome back Thembi!</h1>
     <br><br><br>
     <label class="labelSalary">Please enter your household income for the month:</label>R <input class="inputSalary" placeholder="xxx.xx" type="number">
       <br><br><br><br>
-        <button class="button" onclick= "location.href= './xmonitor.html'" style="margin-left: 50%;">Submit</button>
+        <button class="button" onclick= "location.href= './xmonitor.html'" style="margin-left: 45%;">Submit</button>
     <br><br><br><br><br><br>
+    </section>
+    
 </body>
 </html>

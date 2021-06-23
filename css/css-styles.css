@@ -3,14 +3,29 @@
 body{
     font-family: 'Lato', Helvetica, sans-serif;
     background-color: rgba(230, 53, 156, 0.507);
+    margin: 0 auto;
 }
 h1{
     color: black;
     font-size: larger;
     text-align: center;
 }
+.container1 {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+.header .xmonitor-header {
+    width: 85%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    border: 3px solid white;
+
+}
 .container{
     width: 700px;
+    max-width: 1024px;
     height: 550px;
     border: solid #fff;
     margin: auto;
