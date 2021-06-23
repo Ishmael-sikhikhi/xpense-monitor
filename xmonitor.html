@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xpense Monitor</title>
+    <link rel="stylesheet" href="./xmonitor.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="container xmonitor-header">
+            <h1>XPENSE MONITOR</h1>
+        </div>
+        
+    </header>
+
+    <section class=" income-showcase">
+        <div class="container income-cost">
+            <div class="subBox income-total">
+                <div class="flex income-text">
+                    <h2>Income:</h2>
+                    <h2 class="incomeR ">R<span class="incomeTotal">0.00</span></h2>
+                </div>
+
+            </div>
+
+            <div class="centerBox form income-items">
+                <div class="flex salary">
+                    <h3>salary</h3>
+                    <h4 class="salaryAmount">R<span class="salaryTotal">0.00</span></h4>
+                </div>
+
+                <div class="income-subTotal">
+                   
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="expense-showcase">
+        <div class="container expenses-cost">
+            <div class="subBox expenses-total">
+                <div class="flex expenses-text">
+                    <h2>Expenses:</h2>
+                    <h2 class="rand ">R<span class="expensesTotal">0.00</span></h2>
+                </div>
+
+            </div>
+
+            <div class="centerBox form expenses-items">
+                <div class="sub-text">
+                    <h3>Normal expenses</h3>
+                </div>
+                
+                <div class="flex food">
+                    <h3>Food & Groceries</h3>
+                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                </div>
+
+                <div class="flex transport">
+                    <h3>Transport</h3>
+                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                </div>
+
+                <div class="flex services">
+                    <h3>Services</h3>
+                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                </div>
+
+                <div class="flex n-other">
+                    <h3>Other expenses</h3>
+                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                </div>
+
+                <div class="sub-text">
+                    <h3>Covid-19 related expenses</h3>
+                </div>
+
+                <div class="flex disinfectant">
+                    <h3>Disinfectant</h3>
+                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                </div>
+
+                <div class="flex c-other">
+                    <h3>Other expenses</h3>
+                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                </div>
+               
+            </div>
+
+        </div>
+    </section>
+
+    <section class="balance-showcase">
+        <div class="container show-balance">
+            <div class="subBox balance-field">
+                <div class="flex balance-total">
+                    <h2 class="bText">Balance:</h2>
+                    <h2 class="randBal">R<span class="balanceTotal">0.00</span></h2>
+                </div>
+
+                <div class="form flex covid-per">
+                    <h2 class="bText">Covid-19 expenses:</h2>
+                    <h2 class="randBal"><span class="balanceTotal">0</span>%</h2>  
+                </div>
+
+                <div class="save-btn">
+                    <button class="saveBtn" on type="button" name="button">Save</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

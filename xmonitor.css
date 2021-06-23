@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+
+/* UNIVERSAL.. */
+
+* {
+    font-family: 'Lato', Helvetica, sans-serif;
+    color: #333447;
+}
+
+body {
+    background-color: rgba(230, 53, 156, 0.507);
+    padding: 0;   
+    margin: 0;
+}
+
+input {
+    padding: 5px;
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+/* UTILITIES... */
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.subBox {
+    padding: 5px;
+    max-width: 1000px;
+    font-weight: bold;
+}
+
+.centerBox {
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form {
+    padding: 5px 25px;
+    border-radius: 7.5px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+/* HEADER... */
+
+.header .xmonitor-header {
+    width: 85%;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    border: 3px solid white;
+}
+
+/* INCOME SHOWCASE...*/
+
+.container .income-cost {
+    margin-bottom: 10px;
+}
+
+.income-total .income-text, .expenses-total .expenses-text, .balance-field .balance-total {
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+.income-text h2 {
+    margin: 5px 0;
+}
+
+.income-items {
+    margin-bottom: 10px;
+}
+
+/* EXPENSES SHOWCASE...*/
+
+.expenses-text h2 {
+    margin: 5px 0;
+}
+
+.sub-text h3{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.costText {
+    height: auto;
+    margin: 10px;
+}
+
+.food, .transport, .services, .disinfectant, .n-other, .c-other {
+    padding: 5px;
+    align-content: center;
+}
+
+.food h3, .transport h3, .services h3, .disinfectant h3,
+.n-other h3, .c-other h3 {
+    margin: 5px;
+}
+
+/* BALANCE SHOWCASE...*/
+
+.balance-total {
+    border-top: 1px solid white;
+    justify-content: flex-end;
+}
+
+.randBal {
+    margin: 12.5px 5px 12.5px 10% ;
+}
+
+.bText {
+    margin: 12.5px 0;
+}
+
+.covid-per {
+    max-width: 300px;
+    padding: 5px 10px;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.save-btn {
+    text-align: center;
+}
+
+.saveBtn {
+    padding: 7.5px;
+    margin: 10px;
+    font-size: large;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 22px;
+}
