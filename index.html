@@ -134,6 +134,18 @@ body{
         <button class="button" onclick= "location.href= './xmonitor.html'" style="margin-left: 45%;">Submit</button>
     <br><br><br><br><br><br>
     </section>
+
+    <script>
+        var salaryInput = document.querySelector('.inputSalary');
+        var submitButton = document.querySelector('.button');
+        
+        submitButton.addEventListener('click', function() {
+            localStorage.removeItem('salary');
+            
+            localStorage.setItem("salary", salaryInput.value);
+
+        });
+    </script>
     
 </body>
 </html>

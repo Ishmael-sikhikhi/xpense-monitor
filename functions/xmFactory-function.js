@@ -111,6 +111,11 @@ function xMonitorFF() {
 
     }
 
+    function getObject() {
+        var dataObject = {savings: getBalance(), normal: totalNormExpenses(), covid: totalCovidExpenses()}
+        return dataObject;
+    }
+
     return {
         setSalary, getSalary,
         setFoodAmount, getFoodAmount,
@@ -121,7 +126,7 @@ function xMonitorFF() {
         setMedicationAmount, getMedicationAmount,
         totalNormExpenses, totalCovidExpenses,
         totalExpenses, setBalance,
-        getBalance, covidPer
+        getBalance, covidPer, getObject
 
     }
 }
