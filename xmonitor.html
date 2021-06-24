@@ -58,22 +58,22 @@
                 
                 <div class="flex food">
                     <h3>Food & Groceries</h3>
-                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                    <span>R<input type="number" name="amount" value="" placeholder="0.00" class="foodText"></span>
                 </div>
 
                 <div class="flex transport">
-                    <h3>Transport</h3>
-                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                    <h3>Transportion</h3>
+                    <span>R<input type="number" name="amount" value="" placeholder="0.00" class="transportText"></span>
                 </div>
 
                 <div class="flex services">
-                    <h3>Services</h3>
-                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                    <h3>Services & Bills</h3>
+                    <span>R<input type="number" name="amount" value="" placeholder="0.00" class="servicesText"></span>
                 </div>
 
-                <div class="flex n-other">
+                <div class="flex other-expenses">
                     <h3>Other expenses</h3>
-                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                    <span>R<input type="number" name="amount" value="" placeholder="0.00" class="otherText"></span>
                 </div>
 
                 <div class="sub-text">
@@ -81,18 +81,13 @@
                 </div>
 
                 <div class="flex disinfectant">
-                    <h3>Disinfectant</h3>
-                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                    <h3>Sanitiser dispensers & masks</h3>
+                    <span>R<input type="number" name="amount" value="" placeholder="0.00" class="disinfectantText"></span>
                 </div>
 
                 <div class="flex medication">
                     <h3>Medication</h3>
-                    <input type="number" name="amount" value="" placeholder="" class="costText">
-                </div>
-
-                <div class="flex c-other">
-                    <h3>Other expenses</h3>
-                    <input type="number" name="amount" value="" placeholder="" class="costText">
+                    <span>R<input type="number" name="amount" value="" placeholder="0.00" class="medicationText"></span>
                 </div>
                
             </div>
@@ -110,15 +105,19 @@
 
                 <div class="form flex covid-per">
                     <h2 class="bText">Covid-19 expenses:</h2>
-                    <h2 class="randBal"><span class="balanceTotal">0</span>%</h2>  
+                    <h2 class="randBal"><span class="covidPercent">0</span>%</h2>  
                 </div>
 
                 <div class="save-btn">
-                    <button class="saveBtn" onclick="location.href='./graphicalPresentation.html'" on type="button" name="button">Save</button>
+                    <button class="saveBtn" onclick="location.href='./graphicalPresentation.html'" on type="button" name="button">Save Info</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="./functions/xmFactory-function.js" charset="UTF-8"></script>
+
+    <script src="./functions/xmonitor-dom.js" charset="UTF-8"></script>
     
 </body>
 </html>
