@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 
 /* UNIVERSAL.. */
 
@@ -17,6 +17,7 @@ input {
     padding: 5px;
     max-width: 100px;
     border-radius: 5px;
+    font-weight: bolder;
 }
 
 /* UTILITIES... */
@@ -95,20 +96,23 @@ input {
     font-size: 20px;
 }
 
-.costText {
-    height: auto;
-    margin: 10px;
+.foodText, .transportText, .servicesText, .otherText, .disinfectantText, .medicationText {
+    /* height: auto; */
+    margin: 0 5px;
 }
 
-.food, .transport, .services, .disinfectant, .n-other, .c-other, .medication {
+.food, .transport, .services, .disinfectant, .other-expenses, .medication {
     padding: 5px;
+    font-size: 15px;
     align-content: center;
 }
 
 .food h3, .transport h3, .services h3, .disinfectant h3,
-.n-other h3, .c-other h3, .medication h3 {
+.other-expenses h3, .medication h3 {
     margin: 5px;
+    
 }
+
 
 /* BALANCE SHOWCASE...*/
 
@@ -144,6 +148,16 @@ input {
     font-weight: bold;
     border: 3px solid black;
     border-radius: 5px;
-    background-color: transparent;
+    background-color: white;
+    color: rgb(82, 6, 92);
     font-size: 22px;
+}
+
+.saveBtn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.balanceTotal, .expensesTotal, .incomeTotal {
+    margin: 0 5px;
 }

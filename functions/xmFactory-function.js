@@ -3,10 +3,11 @@ function xMonitorFF() {
     var foodAmount = 0;
     var transportAmount = 0;
     var servicesAmount = 0;
-    var other1Amount = 0;
+    var otherAmount = 0;
     var disinfectantAmount = 0;
     var medicationAmount = 0;
-    var other2Amount = 0;
+    var nTotal = 0;
+    var cTotal = 0;
 
     function setSalary(strSalary) {
         monthlySalary = strSalary;
@@ -48,13 +49,13 @@ function xMonitorFF() {
 
     }
 
-    function setOther1Amount(strOtherExpense1) {
-        other1Amount = strOtherExpense1;
+    function setOtherAmount(strOtherExpense) {
+        otherAmount = strOtherExpense;
 
     }
 
-    function getOther1Amount() {
-        return other1Amount;
+    function getOtherAmount() {
+        return otherAmount;
 
     }
 
@@ -78,28 +79,35 @@ function xMonitorFF() {
 
     }
 
-    function setOther2Amount(strOtherExpense2) {
-        other2Amount = strOtherExpense2;
-
-    }
-
-    function getOther2Amount() {
-        return other2Amount;
-
-    }
-
     function totalNormExpenses(){
-        return getFoodAmount() + getTransportAmount() + getServicesAmount() + getOther1Amount();
+        nTotal = getFoodAmount() + getTransportAmount() + getServicesAmount() + getOtherAmount();
+        return nTotal;
     
     }
 
     function totalCovidExpenses() {
-        return getDisinfectantAmount() + getMedicationAmount() + getOther2Amount();
+        cTotal = getDisinfectantAmount() + getMedicationAmount();
+        return cTotal;
 
     }
 
     function totalExpenses() {
-        return totalNormExpenses() + totalCovidExpenses();
+        return totalNormExpenses() + totalCovidExpenses();;
+
+    }
+
+    function setBalance() {
+        return getSalary();
+
+    }
+
+    function getBalance() {
+        return setBalance() - (totalNormExpenses() + totalCovidExpenses());
+
+    }
+
+    function covidPer() {
+        return totalCovidExpenses() / totalExpenses() * 100;
 
     }
 
@@ -108,12 +116,12 @@ function xMonitorFF() {
         setFoodAmount, getFoodAmount,
         setTransportAmount, getTransportAmount,
         setServicesAmount, getServicesAmount,
-        setOther1Amount, getOther1Amount,
+        setOtherAmount, getOtherAmount,
         setDisinfectantAmount, getDisinfectantAmount,
         setMedicationAmount, getMedicationAmount,
-        setOther2Amount, getOther2Amount,
         totalNormExpenses, totalCovidExpenses,
-        totalExpenses
+        totalExpenses, setBalance,
+        getBalance, covidPer
 
     }
 }
