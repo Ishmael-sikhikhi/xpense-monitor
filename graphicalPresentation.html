@@ -6,34 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/css-styles.css">
+    
 </head>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 
-<body>
+    * {
+        font-family: 'Lato', Helvetica, sans-serif;
+        color: #333447;
+    }
+.wrapper{
+  width:40%;
+  display:block;
+  overflow:hidden;
+  margin:0 auto;
+  padding: 60px 50px;
+  background:#fff;
+  border-radius:4px;
+}
+
+canvas{
+  background:#fff;
+  height:400px;
+}
+
+/* h1{
+    font-family: 'Lato', Helvetica, sans-serif;
+    color: #333447;
+  margin-top:50px;
+  font-weight:200;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+} */
+</style>
+
+<body class="bg-success">
     <header class="header">
         <div class="container1 xmonitor-header">
-            <h1>X-PENSE MONITOR</h1>
+            <h1 style="font-size: 32px; color: #333447;">X-PENSE MONITOR</h1>
         </div>
         
     </header>
-
-    <div class="container">
-        <div class="header">
-            <h1>Graph representng the relationship between expenses vs  income for the month of May</h1>
-        </div>
-        <div class="main clearfix">
-            <h5 class=>House income</h5>
-            <div class="cav">
-                <canvas id="canv"></canvas>
-                <h6>Expenses</h6>
-            </div>
-        </div>
-        <div class="footer">
-            <label for="food">Basic needs: R 5500.00</label>
-            <label for="covid-19">Covid-19: R 2500.00</label>
-            <label for="total">Total: R 8000.00</label>
+    <h2>Graph representing relationship between household income vs Expenses in 6 months</h2>
+    <div class="col-8 offset-2 my-5">
+        <div class="card">
+            <div class="wrapper">
+                <canvas id="myChart"></canvas>
+                </div>
         </div>
     </div>
-    <script src="./functions/graph.js" charset="utf-8"></script>
+<br><br>
+    <button class="button" onclick= "location.href= 'store-list.html'" style="margin-left: 45%;">Submit</button>
 
+   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./functions/graph.js" charset="utf-8"></script>
 </body>
