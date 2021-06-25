@@ -9,15 +9,15 @@ var myChart = new Chart(ctx, {
 		datasets: [{
 			label: 'Covid-realated expenses',
 			backgroundColor: "crimson",
-			data: [1000, 1500, 1000, 2000, 2500,localData.covid],
+			data: [0, 1500, 1000, 2000, 2500,localData.covid],
 		}, {
 			label: 'Normal expenses',
 			backgroundColor: "rgb(236, 240, 14)",
-			data: [8000, 8000, 8800, 8000, 7500,localData.normal],
+			data: [0, 8000, 8200, 7700, 7500,localData.normal],
 		}, {
 			label: 'Savings',
 			backgroundColor: "rgba(45, 190, 16, 0.678)",
-			data: [1000, 500, 200, 0, 0,localData.savings],
+			data: [0, 500, 900, 300, 0,localData.savings],
 		}],
 	},
 options: {

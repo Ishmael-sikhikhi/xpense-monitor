@@ -12,19 +12,31 @@ var covidPercentField = document.querySelector('.covidPercent');
 var saveButton = document.querySelector('.saveBtn');
 var incomeTotalField = document.querySelector('.incomeTotal');
 var salaryTotalField = document.querySelector('.salaryTotal');
+var additionalTotalField = document.querySelector('.additionalTotal');
 
 // Instatiate the instance of the factory function
 let instXmonitor = xMonitorFF();
 
-var strSalary = Number(localStorage.getItem('salary'));
+var lsSalary = Number(localStorage.getItem('salary'));
+var lsAdditional = Number(localStorage.getItem('additional'));
 
-// Set salary from the localStorage
-instXmonitor.setSalary(strSalary);
 
-// Get the income from the localStorage
+// Set salary and Additional income from the localStorage
+instXmonitor.setSalary(lsSalary);
+instXmonitor.setAdditional(lsAdditional);
+
+// Get the income from the factory function
+var inIncome = instXmonitor.totalIncome();
 var inSalary = instXmonitor.getSalary();
-incomeTotalField.innerHTML = inSalary.toFixed(2);
+var inAdditional = instXmonitor.getAdditional();
+incomeTotalField.innerHTML = inIncome.toFixed(2);
 salaryTotalField.innerHTML = inSalary.toFixed(2);
+additionalTotalField.innerHTML = inAdditional.toFixed(2);
+
+// Update the balance on reload
+var updateBalance = instXmonitor.getBalance();
+balanceField.innerHTML = updateBalance.toFixed(2);
+
 
 
 // Add event listeners to the inputs
@@ -92,8 +104,6 @@ disinfectantTextInput.addEventListener('keyup', function() {
     var disinfectantBalance = instXmonitor.getBalance();
     var disinfectantPer = instXmonitor.covidPer();
 
-    // console.log(instXmonitor.covidPer())
-
     expensesTotalField.innerHTML = disinfectantTotal.toFixed(2);
     balanceField.innerHTML = disinfectantBalance.toFixed(2);
     covidPercentField.innerHTML = disinfectantPer.toFixed();
@@ -115,8 +125,15 @@ medicationTextInput.addEventListener('keyup', function() {
 });
 
 saveButton.addEventListener('click', function() {
-    localStorage.clear();
+    localStorage.removeItem('expenseMonitor');
 
     localStorage.setItem("expenseMonitor", JSON.stringify(instXmonitor.getObject()));
+
+    foodTextInput.value = "";
+    transportTextInput.value = "";
+    servicesTextInput.value = "";
+    otherTextInput.value = "";
+    disinfectantTextInput.value = "";
+    medicationTextInput.value = "";
 
 })

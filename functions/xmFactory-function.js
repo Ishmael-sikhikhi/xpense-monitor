@@ -1,5 +1,6 @@
 function xMonitorFF() {
     var monthlySalary = 0;
+    var addIncome = 0;
     var foodAmount = 0;
     var transportAmount = 0;
     var servicesAmount = 0;
@@ -17,6 +18,15 @@ function xMonitorFF() {
     function getSalary() {
         return monthlySalary;
 
+    }
+
+    function setAdditional(strAdditional) {
+        addIncome = strAdditional;
+
+    }
+
+    function getAdditional() {
+        return addIncome;
     }
 
     function setFoodAmount(strFood) {
@@ -79,6 +89,10 @@ function xMonitorFF() {
 
     }
 
+    function totalIncome() {
+        return getSalary() + getAdditional();
+    }
+
     function totalNormExpenses(){
         nTotal = getFoodAmount() + getTransportAmount() + getServicesAmount() + getOtherAmount();
         return nTotal;
@@ -96,13 +110,9 @@ function xMonitorFF() {
 
     }
 
-    function setBalance() {
-        return getSalary();
-
-    }
 
     function getBalance() {
-        return setBalance() - (totalNormExpenses() + totalCovidExpenses());
+        return totalIncome() - (totalNormExpenses() + totalCovidExpenses());
 
     }
 
@@ -118,6 +128,7 @@ function xMonitorFF() {
 
     return {
         setSalary, getSalary,
+        setAdditional,getAdditional,
         setFoodAmount, getFoodAmount,
         setTransportAmount, getTransportAmount,
         setServicesAmount, getServicesAmount,
@@ -125,8 +136,8 @@ function xMonitorFF() {
         setDisinfectantAmount, getDisinfectantAmount,
         setMedicationAmount, getMedicationAmount,
         totalNormExpenses, totalCovidExpenses,
-        totalExpenses, setBalance,
-        getBalance, covidPer, getObject
+        totalIncome, totalExpenses, getBalance,
+        covidPer, getObject
 
     }
 }

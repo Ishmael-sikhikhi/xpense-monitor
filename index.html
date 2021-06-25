@@ -5,119 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome page</title>
-</head>
+    <link rel="stylesheet" href="./css/style.css">
 
-<style>
-    @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+</head>  
 
-body{
-    background-color:  rgba(238, 53, 156, 0.507);
-    font-family: 'Lato', Helvetica, sans-serif;
-    margin: 0 auto;
-
-}
-.container {
-    max-width: 1024px;
-    margin: auto;
-    padding: 0 25px;
-}
-.header .xmonitor-header {
-    width: 85%;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    border: 3px solid white;
-}
-
-/* big screen */
-@media(min-width: 700px){
-    .showcase{
-        background-color: white;
-        border-radius: 7.5px;
-        border:white;
-        border-width:5px;
-         border-style:solid;
-         margin-left: 20%;
-         margin-right: 20%;
-         margin-top: 10%;
-    }
-    h1{
-        color: rgb(82, 6, 92);
-        text-align: center;
-    }
-    .labelSalary{
-        font-size: 20px;
-        padding-right: 5px;
-        margin-left: 25%;
-    }
-    .inputSalary{
-        width: 11%;
-        padding: 5px;
-        height: 16px;
-        border-radius: 5px;
-    }
-    .radioA{
-        margin-left: 30%;
-        font-size: large;
-    }
-    .radioB{
-        font-size: large;
-    }
-    .button {
-  background-color: transparent;
-  color: rgb(82, 6, 92);
-  border: 3px solid black;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.total{
-    width: 10%;
-}
-}
-/* small screen */
-@media(max-width: 700px){
-    .showcase{
-        background-color: rgba(238, 53, 156, 0.507);
-        border:rgb(4, 9, 56);
-        border-width:3px;
-         border-style:solid;
-         margin-left: 20%;
-         margin-right: 20%;
-         margin-top: 10%;
-    }
-    h1{
-        color: rgb(17, 19, 17);
-        text-align: center;
-    }
-    .labelSalary{
-        font-size: medium;
-        padding-right: 2px;
-        margin-left: 5%;
-    }
-    .inputSalary{
-        width: 15%;
-        margin-left: 30%;
-    }
-    .button {
-  background-color: rgba(238, 53, 156, 0.507);
-  border: none;
-  color: rgb(5, 4, 4);
-  margin-left: 10%;
-  border-radius: 5px;
-}
-.total{
-    width: 19%;
-}
-}
-        </style>
-    
 <body>
     <header class="header">
         <div class="container xmonitor-header">
@@ -126,25 +17,57 @@ body{
         
     </header>
 
-    <section class="showcase"> 
-        <h1>Welcome back Thembi!</h1>
-    <br><br><br>
-    <label class="labelSalary">Please enter your household income for the month:</label>R <input class="inputSalary" placeholder="xxx.xx" type="number">
-      <br><br><br><br>
-        <button class="button" onclick= "location.href= './xmonitor.html'" style="margin-left: 45%;">Submit</button>
-    <br><br><br><br><br><br>
+    <section class="wellcomeBack">
+        <div class="container household">
+            <div class="centerBox form household-income">
+                <div class="welcome-text">
+                    <h1>Welcome back Thembi!</h1>
+                    <h2>Please enter your household income for the month</h2>
+                </div>
+
+                <div class="subBox">
+                    <div class="flex salary">
+                        <h3>Salary</h3>
+                        <span>R<input type="number" name="amount" value="" placeholder="0.00" class="salaryText"></span>
+                    </div>
+    
+                    <div class="flex additional">
+                        <h3>Additional Income</h3>
+                        <span>R<input type="number" name="amount" value="" placeholder="0.00" class="additionalText"></span>
+                    </div>
+    
+                    <div class="submit-btn">
+                        <button class="submitBtn" onclick="location.href='./xmonitor.html'" type="button" name="button">Submit</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
     </section>
 
     <script>
-        var salaryInput = document.querySelector('.inputSalary');
-        var submitButton = document.querySelector('.button');
+
+        var salaryInput = document.querySelector('.salaryText');
+        var additionalInput = document.querySelector('.additionalText')
+        var submitButton = document.querySelector('.submitBtn');
+        
         
         submitButton.addEventListener('click', function() {
             localStorage.removeItem('salary');
+            localStorage.removeItem('additional');
             
             localStorage.setItem("salary", salaryInput.value);
+            localStorage.setItem("additional", additionalInput.value);
+
+            salaryInput.value = "";
+            additionalInput.value = "";
 
         });
+
+        
+
     </script>
     
 </body>

@@ -36,7 +36,7 @@
      
     }
     li{
-        margin-left: 30%;
+        margin-left: 15%;
         font-size: large;
         padding-bottom: 1.5%;
       
@@ -44,7 +44,7 @@
     .img1{
         width:  150px;
        height: 150px;
-       margin-left: 30%;
+       margin-left: 15%;
        padding-bottom: 5px;
    
     }
@@ -71,6 +71,27 @@
     border: 3px solid white;
     padding-top: 0px;
 }
+.home-btn {
+    text-align: center;
+}
+.homeBtn, .logBtn {
+    background-color: white;
+    color: rgb(82, 6, 92);
+    border: 3px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.homeBtn:hover, .logBtn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 </style>
 <body>
@@ -80,22 +101,42 @@
         </div>
         
     </header>
-    <h1>We would recommend shopping these specials to meet your savings goals:</h1>
-    <br><br>
+    <div class="container">
 
-    <ul>
-        <li>Clicks Pharmacy (Griffiths Mxenge, Cape Town, 7784)</li>
-        <img src="./images/click.jpg" class="img1"> <img src="./images/clik.jpg" class="img2"> <img src="./images/cliks.jpg" class="img3">
-        <!-- <li>Graceland Pharmacy(Walter Sisulu Drive and, Steve Biko Rd, Khayelitsha, Cape Town, 7784)</li>
-        <li>Alpha Pharmacy(Plot 40805, Site B, Nonkqubela Link, Sulani Dr, Khayelitsha, Cape Town, 7784)</li>
-        <li>Khayelitsha District Hospital (Cnr Walter Sisulu & Steve Biko Road, Khayelitsha, Cape Town, 7784)</li>
-        <li>Khayalitsha pharmacy(Sulani Dr, road, Cape Town, 7784)</li> -->
-        <li>Shoprite Khayelitsha Mall( Noqubela Station Lingulethu West, Cape Town, 7784)</li>
-        <img src="./images/shoprite.png" class="img1"> 
+        <h1>We would recommend shopping these specials to meet your savings goals:</h1>
+        <br><br>
 
-        <li>Pep (Shop 19 Nonqubela Link Mall, Sulani Dr, Khayelitsha, Cape Town, 7784)</li>
-        <img src="./images/pep1.jpg" class="img1"> <img src="./images/pep2.png" class="img2">
+        <ul>
+            <li>Clicks Pharmacy (Griffiths Mxenge, Cape Town, 7784)</li>
+            <img src="./images/click.jpg" class="img1"> <img src="./images/clik.jpg" class="img2"> <img src="./images/cliks.jpg" class="img3">
+            <!-- <li>Graceland Pharmacy(Walter Sisulu Drive and, Steve Biko Rd, Khayelitsha, Cape Town, 7784)</li>
+            <li>Alpha Pharmacy(Plot 40805, Site B, Nonkqubela Link, Sulani Dr, Khayelitsha, Cape Town, 7784)</li>
+            <li>Khayelitsha District Hospital (Cnr Walter Sisulu & Steve Biko Road, Khayelitsha, Cape Town, 7784)</li>
+            <li>Khayalitsha pharmacy(Sulani Dr, road, Cape Town, 7784)</li> -->
+            <li>Shoprite Khayelitsha Mall( Noqubela Station Lingulethu West, Cape Town, 7784)</li>
+            <img src="./images/shoprite.png" class="img1"> 
+
+            <li>Pep (Shop 19 Nonqubela Link Mall, Sulani Dr, Khayelitsha, Cape Town, 7784)</li>
+            <img src="./images/pep1.jpg" class="img1"> <img src="./images/pep2.png" class="img2">
+        
+        </ul>
+        <div class="home-btn">
+            <button class="homeBtn" onclick= "location.href= './index.html'">Home</button>
+            <button class="logBtn">Logout</button>
+        </div>
        
-    </ul>
+
+    </div>
+
+    <script>
+        var homeButton = document.querySelector('.homeBtn');
+
+        homeButton.addEventListener('click', function() {
+
+            localStorage.clear();
+            
+        })
+    </script>
+    
 </body>
 </html>
