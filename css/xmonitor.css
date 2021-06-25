@@ -84,6 +84,10 @@ input {
     margin-bottom: 10px;
 }
 
+.salary h3, .additional h3 {
+    margin: 12.5px;
+}
+
 /* EXPENSES SHOWCASE...*/
 
 .expenses-text h2 {
@@ -96,8 +100,7 @@ input {
     font-size: 20px;
 }
 
-.foodText, .transportText, .servicesText, .otherText, .disinfectantText, .medicationText {
-    /* height: auto; */
+.foodText, .transportText, .servicesText, .otherText, .disinfectantText, .medicationText, .salaryTotal, .additionalTotal {
     margin: 0 5px;
 }
 
@@ -134,6 +137,7 @@ input {
     padding: 5px 10px;
     margin: auto;
     justify-content: center;
+    align-content: center;
     margin-bottom: 10px;
 }
 
